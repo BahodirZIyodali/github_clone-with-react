@@ -1,0 +1,44 @@
+.wrapRep{
+    max-width: 1000px;
+}
+.star {
+    background-color: rgb(216, 216, 216);
+    width: 120px;
+    border: none;
+}
+.line{
+    width: 130px;
+    background-color: lime;
+    border: 1px solid lime;
+}
+.btnW{
+    color: #373E47;
+    display: inline;
+    width: 100px ;
+    border-radius:10px;
+}
+.inputW{
+    color: #373E47;
+    max-width: 600px;
+    border-radius:10px; 
+}
+.sort{
+    gap:10px
+}
+@media screen and (max-width:500px){
+   .sort{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   }
+   
+.btnW{
+   width: 100%;
+}
+.inputW{
+    width: 100%;
+}
+.btnN{
+    width: 100%;
+}
+}

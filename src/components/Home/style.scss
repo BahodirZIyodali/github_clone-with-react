@@ -1,0 +1,29 @@
+h1{
+  
+    font-size: 30px;
+    font-weight: 500;
+}
+h2{
+    font-size: 20px;
+    font-weight: 500;
+    color:rgb(127, 126, 126)  ;
+}
+.btnEdit{
+    margin-top: 10px;
+    width: 280px;
+    height: 30px;
+    border-radius: 5px;
+    background: #f4f4f4;
+    margin-bottom: 20px;
+}
+.home{
+    width: 45%;
+}
+
+@media screen and (max-width: 800px) {
+    .home{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

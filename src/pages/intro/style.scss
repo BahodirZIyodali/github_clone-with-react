@@ -1,0 +1,20 @@
+.navMargin{
+    margin-top: 40px;
+ display: flex;
+ justify-content: center;
+ gap: 30px;
+ border-radius:5px;
+ outline: none;
+}
+.text-black:hover{
+    background-color: rgb(235, 235, 235);
+    border-radius:5px;
+    outline: none;
+} 
+@media screen  and (max-width: 768px){
+    .navMargin{
+     display: flex;
+     justify-content: start;
+     gap:10px;
+    }
+}

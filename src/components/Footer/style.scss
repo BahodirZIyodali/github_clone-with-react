@@ -1,0 +1,15 @@
+.linkHover:hover::after{
+    content: "";
+    display: block;
+    border:1px solid  rgba(0, 0, 0, 0.358);
+    background:rgba(0, 0, 0, 0.358); 
+}
+@media screen and (max-width: 1200px) {
+    .linkHover:hover::after{
+        content: "";
+        display: block;
+        border:none;
+        background:rgba(0, 0, 0, 0.358); 
+    }  
+
+}

@@ -1,0 +1,56 @@
+.wrap{
+    width: 450px;
+    height: 120px;
+    background-color: rgb(255, 252, 252);
+    border: solid 1px rgb(128, 128, 128);
+    border-radius:10px;
+}
+.wrap:hover{
+    box-shadow: 1px 1px #888888;
+}
+.wrappper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+a{
+    color: #539BF5;
+}
+.btns {
+    border-radius:10px;
+    background-color: rgb(252, 252, 252);
+}
+
+@media screen and (max-width: 800px) {
+    .wrappper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+.JavaScript{
+    margin-top: -20px;
+    margin-left: 80px;
+    width: 13px;
+    height: 13px;
+    background: yellow;
+    border-radius: 50%;
+}
+.CSS ,.SCSS{
+    margin-top: -20px;
+    margin-left: 40px;
+    width: 13px;
+    height: 13px;
+    background: purple;
+    border-radius: 50%;
+}
+.HTML{
+    margin-top: -20px;
+    margin-left: 50px; 
+    width: 13px;
+    height: 13px;
+    background: rgb(255, 123, 0);
+    border-radius: 50%;
+}

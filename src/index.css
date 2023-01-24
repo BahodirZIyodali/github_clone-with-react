@@ -1,0 +1,30 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container-fluid{
+    max-width: 1400px;
+}
+.container{
+    max-width: 1400px;
+}
+body{
+    background:rgba(255, 255, 255, 0.884);
+}
+.basis{
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width: 800px) {
+    .basis{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+button{
+    border:none;
+}
