@@ -2,7 +2,13 @@
     background:#2D333B;
 }
 .inputs{
+    padding-left:10px ;
     background: rgba(247, 247, 247, 0.985);
+    background-image: url('https://github.githubassets.com/images/search-key-slash.svg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size:contain;
+
 }
 .inputs:focus{ 
    width: 450px;

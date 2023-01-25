@@ -34,10 +34,9 @@ const index = () => {
       </a>
     
        <div className="flex w-64 min-w-0 mr-5 bg-gray-700 rounded">
-       <form >
-      <input type="text"   placeholder="Search or jump to..."  size="30" className="h-8 w-full px-2 bg-black text-secondary  border-0 outline-none inputs"/>
-      <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" className="mr-2"/>
-      </form>
+     
+      <input type="text"   placeholder="Search or jump to..."  size="30" className=" bg-black text-secondary  border-0 outline-none inputs"/>
+ 
       </div>
 
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
