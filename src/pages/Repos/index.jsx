@@ -1,4 +1,4 @@
-import React ,{useEffect,useState}from 'react'
+import React ,{useEffect,useState,useMemo}from 'react'
 import axios from 'axios';
 import './style.css'
 
@@ -9,6 +9,7 @@ const index = () => {
   const [rep,setRep]=useState([])
   const [point,setPoint] = useState(9);
   const [firstStep,setFirstStep] = useState(1);
+  const [value,setValue] = useState('')
 
 
  useEffect(() =>{
@@ -27,10 +28,18 @@ const index = () => {
  const paginate=(num)=>{
    setFirstStep(num)
  }
+  const filteredRep=useMemo(()=>{
+    return sliceRep.filter((c)=>c.name.toLowerCase().includes(value))
+    
+  },[value])
+  console.log(filteredRep)
+  const inputHandl =(e)=>{
+    setValue(e.target.value)
+  }
   return (
     <div className='container '>
       <div className="sort d-flex">
-                <input type="text" className='form-control inputW '    placeholder='find a repsitory...' />
+                <input type="text" className='form-control inputW ' value={value} onChange={inputHandl}    placeholder='find a repsitory...' />
                 <select className='form-cont rol btnW '>
                     <option >Type</option>
                     <option >Public</option>
@@ -57,7 +66,7 @@ const index = () => {
                 </select>
                 <a href="https://github.com/new" target='_blank'><button className="btn btn-success btnN" >New</button></a>
             </div> {
-         sliceRep.map(el =>{
+          filteredRep.map(el =>{
           return(
             <div className='wrapRep pt-2 pl-1 ' key={el.id}>  
             <hr />   
