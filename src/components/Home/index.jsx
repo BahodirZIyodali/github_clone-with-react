@@ -5,6 +5,7 @@ import "./style.scss";
 
 const index = () => {
    const [user,setUser]=useState([])
+
    useEffect(()=>{
     axios.get('https://api.github.com/users/BahodirZIyodali').then((res)=>{
       setUser(res.data) 

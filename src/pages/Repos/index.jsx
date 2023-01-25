@@ -9,7 +9,7 @@ const index = () => {
   const [rep,setRep]=useState([])
   const [point,setPoint] = useState(9);
   const [firstStep,setFirstStep] = useState(1);
-  const [value,setValue] = useState('')
+  const [value,setValue] = useState()
 
 
  useEffect(() =>{
