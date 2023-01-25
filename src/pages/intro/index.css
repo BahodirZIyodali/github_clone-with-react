@@ -1,0 +1,7 @@
+.reps{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: rgb(230, 230, 230);
+    border-radius: 50%;
+}
