@@ -35,7 +35,7 @@ const index = () => {
     
        <div className="flex w-64 min-w-0 mr-5 bg-gray-700 rounded">
        <form >
-      <input type="text"   placeholder="Search or jump to..."  size="30" className="h-8 w-full px-2 bg-black  border-0 outline-none inputs"/>
+      <input type="text"   placeholder="Search or jump to..."  size="30" className="h-8 w-full px-2 bg-black text-secondary  border-0 outline-none inputs"/>
       <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" className="mr-2"/>
       </form>
       </div>
