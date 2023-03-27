@@ -26,7 +26,7 @@ const index = () => {
    setFirstStep(num)
  }
   const inputHandl =(e)=>{
-  e.target.value;
+   setValue(e.target.value);
   }
 const filteredRep = useMemo(() => { return sliceRep.filter((c) => c.name.toLowerCase().includes(value))},[value]);  
   return (
