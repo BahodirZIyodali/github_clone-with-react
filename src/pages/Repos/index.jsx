@@ -3,20 +3,18 @@ import axios from 'axios';
 import './style.css'
 
 const index = () => {
-
-
-   
   const [rep,setRep]=useState([])
   const [point,setPoint] = useState(9);
   const [firstStep,setFirstStep] = useState(1);
   const [value,setValue] = useState()
-
+  const[state,setState]=useState()
 
  useEffect(() =>{
    axios.get('https://api.github.com/users/BahodirZIyodali/repos').then((response) =>{
     setRep(response.data)
    })
  },[])
+   
  const lastData=firstStep * point;
  const currentPage=lastData - point;
  
@@ -28,14 +26,18 @@ const index = () => {
  const paginate=(num)=>{
    setFirstStep(num)
  }
-  const filteredRep=useMemo(()=>{
-    return sliceRep.filter((c)=>c.name.toLowerCase().includes(value))
-    
-  },[value])
-  console.log(filteredRep)
   const inputHandl =(e)=>{
-    setValue(e.target.value)
+    const keyValue = e.target.value;
+    setValue(keyValue)
   }
+   if (keyValue.trim().length > 0) {
+   const filteredRep=useMemo(()=>{
+     sliceRep.filter((c)=>c.name.toLowerCase().includes(value)) 
+      setState(filteredRep)
+  },[value])}
+   else{
+    setUsers(sliceRep); 
+   }
   return (
     <div className='container '>
       <div className="sort d-flex">
