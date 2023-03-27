@@ -100,8 +100,9 @@ const index = () => {
      
          {steps.map((step,i)=>{
             return(
-                <li key={i} style={{cursor:"pointer"}} className= {`page-item ${step=== firstStep ? "active": ""}`} aria-current="page"
+                <li key={i} style={{cursor:"pointer"}} className= {currentPage+1 === step ? 'page-item active': 'page-item'} aria-current="page"
                 onClick={()=> paginate(step)}
+
                 >
                   <span className="page-link">{step}</span>
                 </li>
