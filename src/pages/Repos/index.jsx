@@ -32,10 +32,8 @@ const index = () => {
     setValue(keyValue)
   }
    if (keyValue.trim().length > 0) {
-   const filteredRep=useMemo(()=>{
-     sliceRep.filter((c)=>c.name.toLowerCase().includes(value)) 
+   let filteredRep= sliceRep.filter((c)=>c.name.toLowerCase().includes(value)) 
       setState(filteredRep)
-  },[value])}
    else{
     setState(sliceRep); 
    }
