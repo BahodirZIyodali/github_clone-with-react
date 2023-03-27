@@ -29,8 +29,6 @@ const index = () => {
           {user.location}
          </a></div>
       </div>
-      
-
    );
 };
 
