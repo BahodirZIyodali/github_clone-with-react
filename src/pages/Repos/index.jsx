@@ -34,6 +34,7 @@ const index = () => {
    if (keyValue.trim().length > 0) {
    let filteredRep= sliceRep.filter((c)=>c.name.toLowerCase().includes(value)) 
       setRep(filteredRep)
+   }
    else{
     setState(sliceRep); 
    }
