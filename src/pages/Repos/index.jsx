@@ -37,7 +37,7 @@ const index = () => {
       setState(filteredRep)
   },[value])}
    else{
-    setUsers(sliceRep); 
+    setState(sliceRep); 
    }
   return (
     <div className='container '>
