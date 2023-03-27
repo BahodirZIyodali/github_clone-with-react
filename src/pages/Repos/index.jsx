@@ -93,9 +93,6 @@ const index = () => {
               ) 
          } )
       }
-     
-     
-      
 
       <nav aria-label='...' className='mx-auto  d-block mt-5'>
          <ul className='pagination pagination-sm  '>
@@ -109,13 +106,9 @@ const index = () => {
                 </li>
             )
          })}
-
          </ul>
-
       </nav>
-
       </div>
   )
 }
-
 export default  index
