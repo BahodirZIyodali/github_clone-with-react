@@ -26,8 +26,9 @@ const index = () => {
  const paginate=(num)=>{
    setFirstStep(num)
  }
+   let keyValue=''
   const inputHandl =(e)=>{
-    const keyValue = e.target.value;
+    keyValue = e.target.value;
     setValue(keyValue)
   }
    if (keyValue.trim().length > 0) {
