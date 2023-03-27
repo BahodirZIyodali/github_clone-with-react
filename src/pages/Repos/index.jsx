@@ -33,7 +33,7 @@ const index = () => {
   }
    if (keyValue.trim().length > 0) {
    let filteredRep= sliceRep.filter((c)=>c.name.toLowerCase().includes(value)) 
-      setState(filteredRep)
+      setRep(filteredRep)
    else{
     setState(sliceRep); 
    }
@@ -67,7 +67,7 @@ const index = () => {
                 </select>
                 <a href="https://github.com/new" target='_blank'><button className="btn btn-success btnN" >New</button></a>
             </div> {
-          filteredRep.map(el =>{
+          rep.map(el =>{
           return(
             <div className='wrapRep pt-2 pl-1 ' key={el.id}>  
             <hr />   
