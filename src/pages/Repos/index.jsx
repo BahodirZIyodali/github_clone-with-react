@@ -28,9 +28,9 @@ const index = () => {
   const inputHandl =(e)=>{
   e.target.value;
   }
-const filteredRep = useMemo(() => {
-    return sliceRep.filter((c) =>
-      c.name.toLowerCase().includes(value)
+const filteredRep = useMemo(() => { 
+   return inputHandl =sliceRep.filter((c) => c.name.toLowerCase().includes(value)
+                              
     );
   }, [value]);  
   return (
@@ -95,7 +95,7 @@ const filteredRep = useMemo(() => {
      
          {steps.map((step,i)=>{
             return(
-                <li key={i} style={{cursor:"pointer"}} className= {currentPage+1 === step ? 'page-item active': 'page-item'} aria-current="page"
+                <li key={i} style={{cursor:"pointer"}} className= {currentPage+1 === step ? 'page-item active': ''} aria-current="page"
 // className={(i+1)===firstStep?"page-item active":"page-item"} onClick={()=>paginate(i+1)}
                 onClick={()=> paginate(step)}
 
