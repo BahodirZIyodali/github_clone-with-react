@@ -32,12 +32,11 @@ const index = () => {
     setValue(keyValue)
   }
    if (keyValue.trim().length > 0) {
-   let filteredRep= sliceRep.filter((c)=>c.name.toLowerCase().includes(value)) 
+   let filteredRep= sliceRep.filter((c)=>c.name.toLowerCase().includes(keyValue)) 
       setRep(filteredRep)
-   }
-   else{
+} else {
     setState(sliceRep); 
-   }
+}
   return (
     <div className='container '>
       <div className="sort d-flex">
@@ -101,6 +100,7 @@ const index = () => {
          {steps.map((step,i)=>{
             return(
                 <li key={i} style={{cursor:"pointer"}} className= {currentPage+1 === step ? 'page-item active': 'page-item'} aria-current="page"
+// className={(i+1)===firstStep?"page-item active":"page-item"} onClick={()=>paginate(i+1)}
                 onClick={()=> paginate(step)}
 
                 >
