@@ -7,7 +7,6 @@ const index = () => {
   const [point,setPoint] = useState(9);
   const [firstStep,setFirstStep] = useState(1);
   const [value,setValue] = useState()
-  const[state,setState]=useState()
 
  useEffect(() =>{
    axios.get('https://api.github.com/users/BahodirZIyodali/repos').then((response) =>{
@@ -26,18 +25,12 @@ const index = () => {
  const paginate=(num)=>{
    setFirstStep(num)
  }
-   let keyValue=''
   const inputHandl =(e)=>{
-    keyValue = e.target.value;
-    setValue(keyValue)
+  e.target.value;
   }
-   if (keyValue.trim().length > 0) {
-   let filteredRep= sliceRep.filter((c)=>c.name.toLowerCase().includes(keyValue)) 
-      setRep(filteredRep)
-} else {
-    setState(sliceRep); 
-}
-  return (
+ const filteredRep=  useMemo()=>{
+   return sliceRep.filter((c)=>c.name.toLowerCase().includes(value)) 
+ },[value]}   return (
     <div className='container '>
       <div className="sort d-flex">
                 <input type="text" className='form-control inputW ' value={value} onChange={inputHandl}    placeholder='find a repsitory...' />
@@ -67,7 +60,7 @@ const index = () => {
                 </select>
                 <a href="https://github.com/new" target='_blank'><button className="btn btn-success btnN" >New</button></a>
             </div> {
-          rep.map(el =>{
+          filteredRep.map(el =>{
           return(
             <div className='wrapRep pt-2 pl-1 ' key={el.id}>  
             <hr />   
