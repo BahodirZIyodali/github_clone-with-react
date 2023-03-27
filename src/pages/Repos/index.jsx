@@ -28,11 +28,7 @@ const index = () => {
   const inputHandl =(e)=>{
   e.target.value;
   }
-const filteredRep = useMemo(() => { 
-   return inputHandl =sliceRep.filter((c) => c.name.toLowerCase().includes(value)
-                              
-    );
-  }, [value]);  
+const filteredRep = useMemo(() => { return sliceRep.filter((c) => c.name.toLowerCase().includes(value))},[value]);  
   return (
     <div className='container '>
       <div className="sort d-flex">
